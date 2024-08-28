@@ -3,6 +3,7 @@
   "files": [],
   "include": ["src/**/*.ts"],
   "compilerOptions": {
+    "moduleResolution": "node",
     "esModuleInterop": true
   }
 }

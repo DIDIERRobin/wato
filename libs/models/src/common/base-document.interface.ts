@@ -1,4 +1,4 @@
-export interface iBaseEntity {
+export interface iBaseDocument {
   _id: string;
   createdAt: Date;
   updatedAt: Date;

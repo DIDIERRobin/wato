@@ -1,7 +1,6 @@
-import { iBaseEntity } from "../common";
+import { iBaseDocument } from "../common";
 
-export interface iCategory extends iBaseEntity {
+export interface iCategory extends iBaseDocument {
   label: string;
   description: string;
-  color: string;
 }
