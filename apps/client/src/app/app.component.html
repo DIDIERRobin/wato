@@ -1,2 +1,9 @@
-<h1>Welcome client</h1>
-<router-outlet></router-outlet>
+<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+
+<div class="layout">
+  <app-sidebar [class.open]="sidebarOpen"></app-sidebar>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
