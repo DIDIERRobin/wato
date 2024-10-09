@@ -8,7 +8,11 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        'sidebar': '250px',  // Utilisation pour la largeur de la sidebar par exemple
+      },
+    },
   },
   plugins: [],
 };

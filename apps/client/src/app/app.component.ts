@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { iTask } from "@wato/models";
+import { HeaderComponent } from "../shared/components/header/header.component";
+import { SidebarComponent } from "../shared/components/sidebar/sidebar.component";
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [HeaderComponent, SidebarComponent, RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor() {
-    const task: iTask = {
-      id: 42
-    }
+  sidebarOpen = false;
+
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
   }
 }

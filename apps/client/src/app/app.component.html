@@ -1,2 +1,10 @@
-<h1>Welcome client</h1>
-<router-outlet></router-outlet>
+<div class="min-h-screen">
+  <app-header></app-header>
+  <div class="flex">
+    <app-sidebar class="hidden md:block w-sidebar">
+    </app-sidebar>
+    <main class="flex-grow p-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
