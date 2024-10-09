@@ -1,5 +1,17 @@
+@use '@angular/material' as mat;
+@use './style/m3-theme';
+
+@include mat.core();
+
+:root {
+  @include mat.all-component-themes(m3-theme.$light-theme);
+}
+
+@include mat.typography-hierarchy(m3-theme.$light-theme);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

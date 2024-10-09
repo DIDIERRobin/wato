@@ -1,9 +1,10 @@
-<app-header (toggleSidebar)="toggleSidebar()"></app-header>
-
-<div class="layout">
-  <app-sidebar [class.open]="sidebarOpen"></app-sidebar>
-
-  <main class="content">
-    <router-outlet></router-outlet>
-  </main>
+<div class="min-h-screen">
+  <app-header></app-header>
+  <div class="flex">
+    <app-sidebar class="hidden md:block w-sidebar">
+    </app-sidebar>
+    <main class="flex-grow p-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>
