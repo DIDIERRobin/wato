@@ -23,8 +23,7 @@
           }
         ],
         "styles": [
-          "apps/client/src/styles.scss",
-          "apps/client/src/style/m3-theme.scss"
+          "apps/client/src/styles.scss"
         ],
         "scripts": []
       },
