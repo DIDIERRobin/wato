@@ -1,10 +1,18 @@
-<div class="min-h-screen">
-  <app-header></app-header>
-  <div class="flex">
-    <app-sidebar class="hidden md:block w-sidebar">
-    </app-sidebar>
-    <main class="flex-grow p-4">
-      <router-outlet></router-outlet>
-    </main>
+<div class="min-h-screen flex flex-col w-full h-full">
+  <app-header class="h-16 m-0"
+              (toggleMenu)="toggleSidebar()">
+  </app-header>
+
+  <div class="flex flex-grow h-full">
+    <div class="flex flex-row w-full">
+      <app-sidebar *ngIf="isSidebarOpen()"
+                   class="w-full md:w-72 h-full fixed md:relative"
+                   (closeMenu)="closeSidebar()">
+      </app-sidebar>
+
+      <main class="flex-grow">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
   </div>
 </div>

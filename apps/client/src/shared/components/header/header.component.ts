@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButton } from "@angular/material/button";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatButton],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Output() toggleMenu = new EventEmitter<void>();
+
+  onToggleMenu() {
+    this.toggleMenu.emit();
+  }
+}
